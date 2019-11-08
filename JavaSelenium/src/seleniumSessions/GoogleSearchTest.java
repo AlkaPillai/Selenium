@@ -26,18 +26,21 @@ public class GoogleSearchTest {
 		
 		
 		driver.get("https://www.google.com");
-		driver.findElement(By.name("q")).sendKeys("Java Tutorials ");
+		driver.findElement(By.name("q")).sendKeys("Java Tutorial ");
 		
-		List<WebElement> list = driver.findElements(By.xpath("//ul[@role='listbox']//li//descendant::div[@class='sbab']"));
+		List<WebElement> list = driver.findElements(By.xpath("//ul[@role='listbox']//li//descendant::div//span"));
 		System.out.println("Total no:of sugggetions in search Box::"+ list.size());
 		
-		
-		for(int i=0; i<list.size(); i++) {
+		for(int i= 0; i<list.size();i++) {
 			System.out.println(list.get(i).getText());
-			if(list.get(i).getText().contains("Java tutorial for beginners")) {
+			if(list.get(i).getText().contains("java tutorial youtube")) {
 				list.get(i).click();
 				break;
 			}
+			
+		}
+	
+			
 		}
 		
 		
@@ -47,4 +50,4 @@ public class GoogleSearchTest {
 
 	}
 
-}
+

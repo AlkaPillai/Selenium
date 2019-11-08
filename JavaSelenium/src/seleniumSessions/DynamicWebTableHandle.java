@@ -59,7 +59,7 @@ public class DynamicWebTableHandle {
 		//Method 2
 		driver.findElement(By.xpath("//a[contains(text(),'Liam Bosco')]/parent::td//preceding-sibling::td/input[@name='contact_id']")).click();
 		
-		
+		driver.findElement(By.xpath("//a[contains(text(),'Adrian Thomas')]/parent::td//preceding-sibling::td/input[@name='contact_id']")).click();
 
 	}
 
